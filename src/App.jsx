@@ -9,7 +9,7 @@ function App() {
 
   /* Get 12 pokemons */
   /* https://pokeapi.co/api/v2/pokemon/pikachu */
-  /* Where to get sprite => other.official-artwork.front-default */
+  /* Where to get sprite => other.official-artwork.front-default => OK */
   const pokemonMainURL = 'https://pokeapi.co/api/v2/pokemon/'
   
 
@@ -28,7 +28,7 @@ function App() {
   }, [])
 
   return (
-    <div>
+    <div className='app-container'>
       {/* The Header will have the Title, rule, and the scores => Current Score and Best Score.  */}
       <Header />
       {/* The container will the cards displayed, where the APP wil send the infos after the promises. */}

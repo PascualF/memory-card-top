@@ -1,5 +1,10 @@
 .card-grid{
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .card-container{
@@ -11,6 +16,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.card-container :hover {
+    cursor: pointer;
 }
 
 .card-container img{
