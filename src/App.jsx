@@ -12,10 +12,30 @@ function App() {
   /* Where to get sprite => other.official-artwork.front-default => OK */
   const pokemonMainURL = 'https://pokeapi.co/api/v2/pokemon/'
   
+  const shuffle = (array) => {
+    let shuffledArray = []; // The shuffled array
+    let usedIndexs = []; // Tracking of the used indexs.
+
+    let i = 0;
+    while(i < array.length) {
+      const randomIndex = Math.floor(Math.random()*array.length)
+      if(!usedIndexs.includes(randomIndex)) {
+        shuffledArray.push(array[randomIndex])
+        usedIndexs.push(randomIndex)
+        i++;
+      }
+    }
+
+    return shuffledArray;
+  }
 
   useEffect(() => {
 
-    const pokemonArray = ['pikachu', 'charmander', 'mewtwo', 'bulbasaur', 'squirtle', 'snorlax', 'vulpix', 'poliwrath', 'alakazam', 'tentacruel', 'golem', 'chansey']
+    const arrayOfPokemons = ['pikachu', 'charmander', 'mewtwo', 'bulbasaur', 'squirtle', 'snorlax', 'vulpix', 'poliwrath', 'alakazam', 'tentacruel', 'golem', 'chansey']
+
+    const pokemonArray = shuffle(arrayOfPokemons)
+
+    console.log(pokemonArray)
 
     const pokemonPromises = pokemonArray.map( poke => 
       fetch(`${pokemonMainURL}${poke}`)

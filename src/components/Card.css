@@ -9,13 +9,14 @@
 
 .card-container{
     border: 1px solid white;
-    border-radius: 50px;
+    border-radius: 25px;
     height: 220px;
     width: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #ff0000;
 }
 
 .card-container :hover {

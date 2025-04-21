@@ -10,6 +10,7 @@ function Card(props) {
         console.log('working ' + name)
     }
 
+
     return (
         <div className='card-grid'>
             {props.pokemonArrayData && props.pokemonArrayData.map((data, index) => (
