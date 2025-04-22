@@ -1,13 +1,12 @@
 import './Header.css'
 
-function Header(){
-    
+function Header(props){
     return (
         <div className="header-container">
-            <h1>Memory Card Game</h1>
+            <h1>Pokemon Card Game</h1>
             <div className='score-div'>
-                <p>Current Score: 0</p>
-                <p>Best Score: 0</p>
+                <p>Current Score: {props.currentScoreCount.length}</p>
+                <p>Best Score: {props.bestScore}</p>
             </div>
         </div>
     )

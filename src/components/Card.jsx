@@ -18,7 +18,6 @@ function Card(props) {
                     className="card-container" 
                     onClick={() => sendNameToApp(data.name)}
                 >
-                    {console.log(data.sprites.other['official-artwork'].front_default)}
                     <img src={data.sprites.other['official-artwork'].front_default} alt={data.name} />
                     <p className='pokemon-name'>{capitalizeName(data.name)}</p>
                 </div>
