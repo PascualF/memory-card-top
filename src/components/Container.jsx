@@ -7,7 +7,10 @@ function Container(props){
     return (
         <div className="main-container">
             {/* The cards will be mapped here */}
-            <Card pokemonArrayData={props.pokemonArrayData}/>
+            <Card 
+                pokemonArrayData={props.pokemonArrayData}
+                nameClicking={props.nameClicking}   
+            />
         </div>
     )
 }
